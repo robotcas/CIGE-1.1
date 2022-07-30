@@ -1,0 +1,632 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap");
+
+:root {
+  --yellow: #0c394d;
+  --black: #000;
+  --white: #fff;
+/*--LIGHT-COLOR: #666;*/
+  --light-bg: #eee;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+:root {
+  --header-height: 3.5rem; /*56px*/
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --hue: 152;
+  --first-color: hsl(var(--hue), 24%, 32%);
+  --first-color-alt: hsl(var(--hue), 24%, 28%);
+  --first-color-light: hsl(var(--hue), 24%, 66%);
+  --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 55%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+* {
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+section {
+  padding: 5rem 10%;
+}
+
+
+.heading--03 {
+  background: url(../imagenes/footer.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  height: 150px;
+}
+
+.heading--03 h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.heading--03 p {
+  font-size: 22px;
+  color: #fff;
+  padding-top: 0.5rem;
+}
+
+.heading--03 h3 p a {
+  padding-right: 0.5rem;
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.heading--03 p a:hover {
+  color: #fff;
+}
+
+.a-enla{
+  color: #fff;
+}
+
+.about {
+  margin-top: 3%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .image {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  padding-right: 5rem;
+  padding-bottom: 5rem;
+}
+
+.about .image img {
+  width: 100%;
+  -webkit-box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.about .content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+}
+
+.about .content h3 {
+  font-size: 3rem;
+  color: #0c394d;
+}
+
+.about .content p {
+  font-size: 1.8rem;
+  color: #000;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.fun-fact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+  background: #f2f2f2;
+  gap: 3.5rem;
+}
+
+.fun-fact .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.fun-fact .box img {
+  height: 10rem;
+}
+
+.fun-fact .box h3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.fun-fact .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #000;
+  padding-top: .5rem;
+}
+
+.facilities {
+  background: #f5f5f5;
+}
+
+.facilities .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.facilities .box-container .box {
+  background: #fff;
+  padding: 3rem;
+  text-align: center;
+  border: 0.2rem solid #0c394d;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.facilities .box-container .box img {
+  height: 10rem;
+  margin-bottom: .5rem;
+}
+
+.facilities .box-container .box h3 {
+  padding: 1rem 0;
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.facilities .box-container .box p {
+  font-size: 16px;
+  line-height: 2;
+  color: #000;
+}
+
+.contact .icons-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.contact .icons-container .icons {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: #f2f2f2;
+  margin-bottom: 2rem;
+}
+
+.contact .icons-container .icons i {
+  height: 6.5rem;
+  width: 6.5rem;
+  line-height: 6.5rem;
+  font-size: 2.5rem;
+  color: #0c394d;
+  background: #f2f2f2;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact .icons-container .icons h3 {
+  font-size: 2rem;
+  color: #000;
+  padding: 0.7rem 0;
+}
+
+.contact .icons-container .icons p {
+  line-height: 2;
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.contact .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact .row form {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  border-radius: 1rem;
+  background: #f2f2f2;
+  padding: 2rem;
+}
+
+.contact .row form h3 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.contact .row form .box,
+.contact .row form textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  color: #000;
+  text-transform: none;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+.contact .row .map {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.blogs .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.blogs .box-container .box {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: #f2f2f2;
+}
+
+.blogs .box-container .box img {
+  height: 25rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blogs .box-container .box .content {
+  padding: 2rem;
+}
+
+.blogs .box-container .box .content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  /* border-bottom: var(--border); */
+  border-bottom: 4px solid #fff;
+}
+
+.blogs .box-container .box .content .icons a {
+  /* color: var(--light-color); */
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.blogs .box-container .box .content .icons a:hover {
+  color: var(--black);
+}
+
+.blogs .box-container .box .content .icons a i {
+  /* color: var(--orange); */
+  padding-right: 0.5rem;
+  color: #bcbf69;
+}
+
+.blogs .box-container .box .content h3 {
+  line-height: 1.8;
+  color: var(--black);
+  font-size: 2.2rem;
+  padding: 0.5rem 0;
+}
+
+.blogs .box-container .box .content p {
+  line-height: 1.8;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.cont-pat {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1%;
+}
+
+.title-pat {
+  font-size: 22px;
+  color: #000;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.list-numer {
+  font-size: 18px;
+  line-height: 25px;
+  color: #000;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 0;
+}
+
+.gallery__image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../imagenes/mecanica de suelos.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+}
+
+.gallery__image:nth-of-type(2) {
+    background-image: url('../imagenes/mecanica-de-suelos-big.jpg');
+}
+
+.gallery__image- {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../imagenes/Mecanica de Rocas - ABIMAEL DELGADO.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+}
+
+.gallery__image-:nth-of-type(2) {
+    background-image: url('../imagenes/rocas - 2.jpg');
+}
+
+.gallery__image-- {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../imagenes/Estudios Geologicos - ABIMAEL DELGADO.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+}
+
+.gallery__image--:nth-of-type(2) {
+    background-image: url('../imagenes/geologicos - 2.jpg');
+}
+
+.gallery__image--- {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../imagenes/Estudio Hidrologico - ABIMAEL DELGADO.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+}
+
+.gallery__image---:nth-of-type(2) {
+    background-image: url('../imagenes/hidrologico - 2.jpg');
+}
+
+.gallery__image----{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../imagenes/Estabilidad de Taludes - ABIMAEL DELGADO.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+}
+
+.gallery__image----:nth-of-type(2) {
+    background-image: url('../imagenes/taludes - 2.webp');
+}
+
+.gallery__image-----{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../imagenes/Topografia_nivel - ABIMAEL DELGADO.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+}
+
+.gallery__image-----:nth-of-type(2) {
+    background-image: url('../imagenes/topografia - 2.jpg');
+}
+
+.gallery__image------{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../imagenes/diseño de pavimentos.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+}
+
+.gallery__image------:nth-of-type(2) {
+    background-image: url('../imagenes/pavimento - 2.jpg');
+}
+
+.gallery__image-------{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../imagenes/diseño estructural.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+}
+
+.gallery__image-------:nth-of-type(2) {
+    background-image: url('../imagenes/estructural - 2.jpg');
+}
+
+.05{
+  color: #000;
+}
+
+@media (max-width: 768px) {
+
+.gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 250px;
+        padding:  0 0;
+    }
+    
+    .gallery__image {
+        aspect-ratio:unset;
+        background-image: url('../imagenes/mecanica de suelos.jpg');
+        height: 250px;
+    }
+    
+    .gallery__image:nth-of-type(2) {
+        background-image: url('../imagenes/mecanica-de-suelos-big.jpg');
+    }
+  
+      .gallery__image- {
+        aspect-ratio:unset;
+        background-image: url('../images/5.jpg');
+        height: 250px;
+    }
+    
+    .gallery__image-:nth-of-type(2) {
+        background-image: url('../images/6.jpg');
+    }
+
+      .gallery__image-- {
+        aspect-ratio:unset;
+        background-image: url('../imagenes/Estudios Geologicos - ABIMAEL DELGADO.jpg');
+        height: 250px;
+    }
+    
+    .gallery__image--:nth-of-type(2) {
+        background-image: url('../imagenes/geologicos - 2.jpg');
+    }
+
+      .gallery__image--- {
+        aspect-ratio:unset;
+        background-image: url('../imagenes/Estudio Hidrologico - ABIMAEL DELGADO.jpg');
+        height: 250px;
+    }
+    
+    .gallery__image---:nth-of-type(2) {
+        background-image: url('../imagenes/hidrologico - 2.jpg');
+    }
+
+          .gallery__image---- {
+        aspect-ratio:unset;
+        background-image: url('../imagenes/Estabilidad de Taludes - ABIMAEL DELGADO.jpg');
+        height: 250px;
+    }
+    
+    .gallery__image----:nth-of-type(2) {
+        background-image: url('../imagenes/taludes - 2.webp');
+    }
+
+              .gallery__image----- {
+        aspect-ratio:unset;
+        background-image: url('../imagenes/Topografia_nivel - ABIMAEL DELGADO.jpg');
+        height: 250px;
+    }
+    
+    .gallery__image-----:nth-of-type(2) {
+        background-image: url('../imagenes/topografia - 2.jpg');
+    }
+
+
+              .gallery__image------ {
+        aspect-ratio:unset;
+        background-image: url('../imagenes/diseño de pavimentos.jpg');
+        height: 250px;
+    }
+    
+    .gallery__image------:nth-of-type(2) {
+        background-image: url('../imagenes/pavimento - 2.jpg');
+    }
+
+                  .gallery__image------- {
+        aspect-ratio:unset;
+        background-image: url('../imagenes/diseño estructural.jpg');
+        height: 250px;
+    }
+    
+    .gallery__image-------:nth-of-type(2) {
+        background-image: url('../imagenes/estructural - 2.jpg');
+    }
+}
